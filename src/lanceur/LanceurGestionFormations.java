@@ -15,16 +15,16 @@ public class LanceurGestionFormations {
 		man = new Manager("Creac'h", "Yan", 2);
 
 		// 3) Utilisation
-		emp.demanderFormation("Spring", null);
+		emp.demanderFormation("Spring", null);	// L'employé Julien SIMON demande une formation sur Spring
 		man.setPrenom("Yann");
-		man.demanderFormation("test", null);
-		man.validerFormation();
-		System.out.println(man);
+		man.demanderFormation("test", null);	// L'employé Yann Creac'h demande une formation sur test
+		man.validerFormation();					// Le manager valide la formation
+		System.out.println(man);				// Employe [nom=Creac'h, prenom=Yann, id=2]Manager [listeEmployes=null]
 		
 		// 4) Tester l'interface
 		ServicePaie sp = new ServicePaie();
-		sp.listerFormationPersonnel(emp);
-		sp.listerFormationPersonnel(man);
+		sp.listerFormationPersonnel(emp);		// Consultation des formations deJulien SIMON
+		sp.listerFormationPersonnel(man);		// Consultation des formations deYann Creac'h
 	}
 
 }
